@@ -1,11 +1,6 @@
 :execute {/system logging disable numbers=0,1}
 :execute {/system logging add topics=info action=disk}
 :execute {/system logging add topics=error action=disk}
-:log info "Checking for RouterOS upgrades"
-:execute {/system package update install;}
-:delay 3
-:put yes
-:log info "Checked for RouterOS upgrades"
 :log info "Checking firmware..."
 :log info "$[/system routerboard get current-firmware]"
 :log info "Checking Updating firmware..."
